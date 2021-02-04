@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.552" height="17.552" viewBox="0 0 17.552 17.552">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="17.552" height="17.552" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g transform="translate(-132 -334)">
+      <g id="Iconly_Light_Home" data-name="Iconly/Light/Home" transform="translate(132 334)">
+        <g id="Home" transform="translate(1.828 1.463)">
+          <path id="Home-2" data-name="Home" d="M4.869,13.728V11.486A1.043,1.043,0,0,1,5.91,10.448H8.021a1.043,1.043,0,0,1,1.048,1.038h0v2.25a.9.9,0,0,0,.879.892h1.407a2.527,2.527,0,0,0,2.54-2.514h0V5.732a1.784,1.784,0,0,0-.7-1.393L8.38.5A2.326,2.326,0,0,0,5.495.5L.7,4.346A1.77,1.77,0,0,0,0,5.739v6.373a2.527,2.527,0,0,0,2.54,2.514H3.947a.9.9,0,0,0,.908-.9h0" transform="translate(0 0)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

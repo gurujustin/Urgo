@@ -1,0 +1,287 @@
+/* lesson */
+
+:root {
+    --martinique: rgba(44, 45, 73, 1);
+    --concrete: rgba(241, 242, 244, 1);
+    --blueberry: rgb(66, 133, 243);
+}
+
+
+
+.s-lesson-div {
+    padding-left: 62px;
+    padding-right: 35px;
+}
+
+.lesson-title {
+    color: rgba(44, 45, 73, 1);
+    font-family: "Poppins-Bold", Helvetica, Arial, serif;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.s-lesson-content-left {
+    padding-right: 30px;
+}
+
+.s-lesson-content-right {}
+
+.s-lesson-video {
+    margin-bottom: 32px;
+}
+
+.s-lesson-info {
+    border: 2px solid var(--concrete);
+    background-color: white;
+    border-radius: 6px;
+}
+
+/* === */
+.downloaditem {
+    font-size: 12px;
+    margin-bottom: 0.5rem !important;
+}
+
+.downloaditem a {
+    color: #495057;
+}
+
+/* Video Player */
+:root {
+    --plyr-video-controls-background: linear-gradient(rgba(59, 144, 241, 0.842), rgba(59, 144, 241, 0.842)) !important;
+    --plyr-range-fill-background: white !important;
+
+    --plyr-control-icon-size: 15px !important;
+    --plyr-control-spacing: 2px !important;
+    /* --plyr-control-radius:1px!important; */
+    /* --plyr-control-padding: 12px!important; */
+    /* --plyr-font-size-base:50px!important; */
+    /* --plyr-progress-loading-background:rgba(35, 40, 47, 0.6)!important; */
+}
+
+button.plyr__control.plyr__control--overlaid {
+    padding: 15px !important;
+    border-radius: 0% !important;
+}
+
+button.plyr__control.plyr__control--overlaid svg {
+    width: 99px !important;
+    height: 45px !important;
+}
+
+.plyr__control {
+    background-color: rgba(59, 144, 241, 0.842) !important;
+}
+
+/* imagePreview */
+.imgPreviewPopUp {
+    width: 25%;
+}
+
+.imgPreviewPopUp img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.25s ease;
+}
+
+.imgPreviewPopUp .previewButtonGroup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/* videoPreview */
+.videoPreviewPopUp {
+    width: 45%;
+    position: relative;
+
+}
+
+.videoPreviewPopUp .mfp-close {
+    display: none;
+}
+
+.videoPreviewPopUp video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.25s ease;
+}
+
+.videoPreviewPopUp .downVideoButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+    box-shadow: 4px 4px 4px #00000050;
+}
+
+/* otherPreviewPopup */
+.otherPreviewPopUp {
+    width: 25%;
+}
+
+.otherPreviewPopUp .mfp-close {
+    display: none;
+}
+
+
+/* Timeline */
+.s-lesson-timestamp {
+    color: var(--martinique);
+    font-family: 'Poppins-SemiBold-SemiBold', Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.s-ugro-timeline-container {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.s-ugro-timeline {
+    border-left: 3px dotted #e0e0e0;
+    margin: 0px 3px;
+}
+
+.s-ugro-timeline .s-timeline-title {
+    font-size: 12px;
+    color: var(--martinique);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+}
+
+.s-ugro-timeline .s-timeline-timeinfo {
+    font-size: 11px;
+}
+
+.s-ugro-timeline .event-list {
+    cursor: pointer;
+}
+
+.s-ugro-timeline .event-list.active {
+    background-color: rgba(28, 134, 255, 0.308);
+}
+
+.s-ugro-timeline .event-list .event-timeline-dot {
+    left: -5px;
+    top: 25px;
+    font-size: 8px;
+}
+
+.s-ugro-timeline .event-list hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.s-ugro-timeline .s-timeline-timeinfo .s-timeline-time {
+    color: rgba(27, 135, 252, 1.0);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+}
+
+.s-ugro-timeline .event-list {
+    padding: 11px 0px 0px 22px;
+}
+
+/* description */
+.s_lesson_description_section {
+    border-right: 1px solid rgb(232 232 232);
+}
+
+.s-lesson-description-header {
+    color: var(--martinique);
+    font-family: 'Poppins-SemiBold-SemiBold', Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.s_lesson_description {
+    color: rgba(149, 157, 173, 1.0);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+/* Keytakeaways */
+.nav-tabs-ugro .nav-item .nav-link {
+    color: rgb(44, 45, 73);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.nav-tabs-ugro .nav-item .nav-link.active {
+    color: var(--blueberry);
+}
+
+.nav-tabs-ugro .nav-item .nav-link::after {
+    background: var(--blueberry);
+    width: 66%;
+    left: 17%;
+}
+
+.s-keytakeaway-item {
+    color: var(--martinique);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.s-keytakeaway-item i {
+    color: #b1e2ba;
+    font-size: 16px;
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+
+/* download */
+.s_lesson_download_section hr {
+    margin: 0px;
+}
+.s_lesson_download_title{
+    color: var(--martinique);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+}
+.s_lesson_download_size{
+    color: rgba(129,142,154,1.0);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Prev, Next Button */
+.s_lesson_button_prev{
+    width: 45%; 
+    color: rgba(101,156,247,1.0);
+    background-color: transparent;
+    border: 1.2px solid rgba(101,156,247,1.0);
+    border-radius: 5px;
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+}
+.s_lesson_button_next{
+    width: 45%; 
+    color: rgba(101,156,247,1.0);
+    background-color: rgba(101,156,247,1.0);
+    border-radius: 5px;
+    color: var(--white);
+    font-family: 'Poppins', Helvetica, Arial, serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+}

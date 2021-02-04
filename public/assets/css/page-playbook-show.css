@@ -1,0 +1,46 @@
+#pdf-thumbnail {
+    width: 100%;
+    height: 75vh;
+    overflow: auto;
+    text-align: center;
+}
+
+#pdf-content-container {
+    width: 100%;
+    height: 75vh;
+    overflow: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+#pdf-content {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pdf-page-canvas {
+    /* display: block; */
+    margin: 5px auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#zoombuttongroup {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%);
+}
+
+.pagenumber.active {
+    padding: 1px 9px;
+    border-radius: 6px;
+}
+
+.pagenumber.active {
+    color: white;
+    background-color: rgb(17, 73, 224);
+}

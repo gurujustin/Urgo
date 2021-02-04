@@ -1,0 +1,10 @@
+.page-content.lesson-overview-page-content {
+    background-image: url('../../assets/images/bg_lessonoverview.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.ugro-video-tile:hover {
+    box-shadow: 0px 6px 4px #00000038;
+    cursor: pointer;
+}

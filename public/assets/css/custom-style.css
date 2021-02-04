@@ -1,0 +1,77 @@
+body {
+    background-color: #F4F7FC!important;
+}
+
+.simplebar-horizontal {
+    display: none;
+}
+
+.poster-description{
+    font-size: 12px;
+    font-family: 'Font Awesome 5 Free';
+}
+#favourite-star{
+    color: yellow;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.simplebar-content-wrapper {
+    height: calc(100% - 100px)!important;
+}
+/* get support button */
+
+
+/* highlight selected menu */
+.vertical-menu .active {
+    background-color: #E8F3FF;
+    border-left: 3px solid #087CFC!important;
+    z-index: 2;
+}
+/* highlight selected menu */
+
+
+/* page loader */
+.ajax-loader {
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: +100 !important;
+    height: 100%;
+    display: none;
+}
+
+#status2 {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: calc(50% + 125px);
+    top: 50%;
+    margin: -20px 0 0 -20px;
+}
+/* page loader */
+
+
+
+@media (max-width: 992px) {
+    .topbar-collapsed {
+        left: 0!important;
+    }
+    .sidebar-collapsed {
+        top: 70px!important;
+    }
+    
+    #account-setting-modal ul li a {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+svg:not(.not-hover):hover{
+    filter: 
+    invert(0.05) sepia(0.5) saturate(9.5) hue-rotate(32.4deg) brightness(0.88);
+}
+svg:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,144 @@
+#account-setting-modal {
+    max-width: 643px;
+    height:747px;
+    margin-top: 107px;
+    
+    
+    .top-area {
+        background: #FBFBFB;
+        border-radius: 5px;
+        .user-name {
+            span{
+                font-size: 16px;
+                color: #268AF7;
+                font-family: inherit;
+                letter-spacing:.142em;
+            }
+            div{
+                padding-top: 102px;
+                font-size: 22px;
+                color: #2C2D49;
+                font-family: inherit;
+                letter-spacing: .125em;
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+    
+    form {
+        max-width: 450px;
+        margin: 0 auto;
+        input{
+            font-size: 14px;
+            line-height: 16px;
+            padding: 9px 0.75rem;
+            letter-spacing: .035em;
+            color: #838591!important;
+        }
+        label{
+            font-size: 14px;
+            line-height: 16px;
+            padding-left: 14px;
+            letter-spacing: .035em;
+            color: #51545E!important;
+        }
+        .show-hide-pass {
+            top: 36px;
+            right: 10px;
+            font-size: 19px;
+            cursor: pointer;
+            &:hover {
+                color: #2B2C47;
+            }
+        }
+        .update-settings {
+            width: 270.5px;
+            height: 57.5px;
+            border-radius: 30px;
+            background: rgb(120,192,255); 
+            background: linear-gradient(90deg, rgba(162,161,224,1) 3%,  rgba(120,192,255,1) 63%); 
+            color: white;
+            line-height: 42.5px;
+            font-size: 17px;
+            
+            svg {
+                margin-left: 31.7px;
+            }
+        }
+    }
+    ul {
+        max-width: 505px;
+        margin: 23px auto;
+        li a {
+            font-size: 14px;
+            color: #2B2C47;
+            letter-spacing: 0.014em;
+            line-height: 21px;
+            font-weight: 400;
+            padding: 12px 3px;
+            margin: 0 16px;
+            padding-bottom: 18px;
+        }
+        a.active{
+            border-bottom: 2px solid #4285F3;
+            color: #4285F3;
+            background: none;
+            font-weight: 500;
+        }
+    }
+    .profile-img {
+        top: -79px;
+        left: calc(50% - 79px);
+        width: 158px;
+        height: 158px;
+        
+        #settingavatarimage {
+            width: 100%;
+            height: 100%;
+            border:white 3px solid;  
+            box-shadow: 8px 6px 20px 2px #00000050;
+        }
+        &:hover .dark-opacity{
+            display: block;
+        }
+        &:hover .camera{
+            display: block;
+            
+        }
+        .dark-opacity {
+            width: 150px;
+            height: 150px;
+            top: 3px;
+            left: 3px;
+            background-color: #000;
+            opacity: 0.2;
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        .vip {
+            font-size: 13px;
+            letter-spacing: .142em;
+            font-weight: $font-weight-regular;
+            width: 48px;
+            height: 23px;
+            text-align: center;
+            // vertical-align: middle;
+            line-height: 23px;
+            top: 18px;
+            right: -3px;
+            border-radius: 15px;
+            color: white;
+            background: rgb(120,192,255); 
+            background: linear-gradient(90deg, rgba(120,192,255,1) 3%, rgba(162,161,224,1) 63%); 
+        }
+        .camera {
+            position: absolute;
+            top: calc(50% - 16px);
+            left: calc(50% - 16px);
+            display: none;
+            
+        }
+    }
+}

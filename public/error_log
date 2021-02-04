@@ -1,0 +1,18 @@
+[16-Dec-2020 17:14:44 UTC] PHP Warning:  Uncaught ErrorException: require(simple_html_dom.php): failed to open stream: No such file or directory in /home/w1som4rsg18c/public_html/routes/api.php:2
+Stack trace:
+#0 /home/w1som4rsg18c/public_html/routes/api.php(2): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(simple_...', '/home/w1som4rsg...', 2, Array)
+#1 /home/w1som4rsg18c/public_html/routes/api.php(2): require()
+#2 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteFileRegistrar.php(35): require('/home/w1som4rsg...')
+#3 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(423): Illuminate\Routing\RouteFileRegistrar->register('/home/w1som4rsg...')
+#4 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(380): Illuminate\Routing\Router->loadRoutes('/home/w1som4rsg...')
+#5 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(134): Illuminate\Routing\Router->group(Array, '/home in /home/w1som4rsg18c/public_html/routes/api.php on line 2
+[16-Dec-2020 17:14:44 UTC] PHP Fatal error:  Illuminate\Routing\RouteFileRegistrar::main(): Failed opening required 'simple_html_dom.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/w1som4rsg18c/public_html/routes/api.php on line 2
+[16-Dec-2020 17:14:48 UTC] PHP Warning:  Uncaught ErrorException: require(simple_html_dom.php): failed to open stream: No such file or directory in /home/w1som4rsg18c/public_html/routes/api.php:2
+Stack trace:
+#0 /home/w1som4rsg18c/public_html/routes/api.php(2): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(simple_...', '/home/w1som4rsg...', 2, Array)
+#1 /home/w1som4rsg18c/public_html/routes/api.php(2): require()
+#2 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteFileRegistrar.php(35): require('/home/w1som4rsg...')
+#3 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(423): Illuminate\Routing\RouteFileRegistrar->register('/home/w1som4rsg...')
+#4 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(380): Illuminate\Routing\Router->loadRoutes('/home/w1som4rsg...')
+#5 /home/w1som4rsg18c/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(134): Illuminate\Routing\Router->group(Array, '/home in /home/w1som4rsg18c/public_html/routes/api.php on line 2
+[16-Dec-2020 17:14:48 UTC] PHP Fatal error:  Illuminate\Routing\RouteFileRegistrar::main(): Failed opening required 'simple_html_dom.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/w1som4rsg18c/public_html/routes/api.php on line 2
