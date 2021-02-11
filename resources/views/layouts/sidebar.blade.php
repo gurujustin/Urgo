@@ -3,28 +3,28 @@
 <div class="vertical-menu border-right sidebar-collapsed">
 
     <div data-simplebar class="h-100">
-        
+
         <!-- LOGO -->
         <div class="position-relative border-0" >
-            
+
             <a href="javascript:loadAccountSettingModal()">
                 <div class="d-flex flex-column justify-content-center align-items-center bg-white" style="width:100%; left:0; margin-top:44px;">
-                
+
                     <div class="position-relative rounded-circle" style="width: 104px; height:104px; background: #0B81FC; margin-left: -16.5px;">
                         <div class="position-absolute bg-white rounded-circle" style="width:102px; height:102px; left: 1px; top: 1px;"></div>
-                        <img id="sidebar-avatar" class="position-absolute rounded-circle avatar-xl" 
-                              alt="98x98" 
-                              src="{{ isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('/assets/images/users/avatar-5.jpg') }}" data-holder-rendered="true" 
+                        <img id="sidebar-avatar" class="position-absolute rounded-circle avatar-xl"
+                              alt="98x98"
+                              src="{{ isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('/assets/images/users/avatar-5.jpg') }}" data-holder-rendered="true"
                               style="width:98px; height:98px; top: 3px; left:3px;">
-                        
+
                         <div class="position-absolute d-flex justify-content-center align-items-center" style="width:35px; height:17px; border-radius:15px; text-align:center; font-size:10px; letter-spacing:0.142em; font-weight: 400;  top:11px; right:-3px;  color:white; background: rgb(120,192,255); background: linear-gradient(90deg, rgba(120,192,255,1) 3%, rgba(162,161,224,1) 63%); " >
                             <span>VIP</span>
                         </div>
                     </div>
-                    
+
                     <div class="dropdown" style="margin-top:14px;">
                     <!-- 6px text space -->
-                        <span class="dropdown-toggle text-dark my-2" id="dropdownMenuButton" data-toggle="dropdown2" aria-haspopup="true" aria-expanded="false"><span style="font-size:20px; font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing:0.125em"> 
+                        <span class="dropdown-toggle text-dark my-2" id="dropdownMenuButton" data-toggle="dropdown2" aria-haspopup="true" aria-expanded="false"><span style="font-size:20px; font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing:0.125em">
                             {{ ucfirst(Auth::user()->first_name) }} {{ ucfirst(Auth::user()->last_name) }} </span>
                         <span>
                             <svg style="margin-top:-6px;" xmlns="http://www.w3.org/2000/svg" width="11.173" height="6.443" viewBox="0 0 11.173 6.443">
@@ -44,7 +44,7 @@
                 </div>
             </a>
         </div>
-        
+
         <!-- Get Support btn -->
         <div id="get-support" class="position-fixed">
             <a href="">
@@ -54,10 +54,10 @@
                     <path id="Path_33945" d="M0,2.765a2.031,2.031,0,0,1,.2-.889A3.705,3.705,0,0,1,2.786.39a15.388,15.388,0,0,1,2.148-.3,22.965,22.965,0,0,1,4.019,0A15.564,15.564,0,0,1,11.1.39a3.565,3.565,0,0,1,2.584,1.485,2.081,2.081,0,0,1,0,1.787A3.53,3.53,0,0,1,11.1,5.139a14.407,14.407,0,0,1-2.148.31A23.67,23.67,0,0,1,5.68,5.5a3.727,3.727,0,0,1-.747-.05,14.138,14.138,0,0,1-2.14-.31A3.547,3.547,0,0,1,.2,3.662,2.089,2.089,0,0,1,0,2.765Z" transform="translate(0 12.087)" fill="none" stroke="#087cfc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
                   </g>
                 </svg>
-                <span>Get Support</span> 
+                <span>Get Support</span>
             </a>
         </div>
-        
+
         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
@@ -124,7 +124,7 @@
                         <span>Coaching Calls</span>
                     </a>
                 </li>
-
+@if(Auth::user()->role == 1)
                 <li class="menu-title" style="margin-top: 12px;">products</li>
 
                 <li style="margin-top:-8px;">
@@ -207,6 +207,22 @@
                     </a>
                 </li>
 
+                <li class="menu-title" style="margin-top:5px">users</li>
+
+                <li style="margin-top: -8px;">
+                    <a href="{{route('user-table')}}" class=" waves-effect">
+                        <svg id="Iconly_Light_Buy" data-name="Iconly/Light/Buy" xmlns="http://www.w3.org/2000/svg" width="17.659" height="17.659" viewBox="0 0 17.659 17.659">
+                          <g id="Buy" transform="translate(2.023 2.391)">
+                            <path id="Stroke_1" data-name="Stroke 1" d="M.562,0A.563.563,0,1,1,0,.563.563.563,0,0,1,.562,0Z" transform="translate(2.876 12.192)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                            <path id="Stroke_3" data-name="Stroke 3" d="M.563,0A.563.563,0,1,1,0,.563.563.563,0,0,1,.563,0Z" transform="translate(11.154 12.192)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                            <path id="Stroke_5" data-name="Stroke 5" d="M0,0,1.53.265l.709,8.442A1.326,1.326,0,0,0,3.561,9.923H11.59A1.327,1.327,0,0,0,12.9,8.785l.7-4.825a.986.986,0,0,0-.976-1.128H1.776" transform="translate(0)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                            <path id="Stroke_7" data-name="Stroke 7" d="M0,.5H2.04" transform="translate(8.37 5.051)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                          </g>
+                        </svg>
+                        <span>User management</span>
+                    </a>
+                </li>
+@endif
                 <li class="menu-title"></li>
 
             </ul>

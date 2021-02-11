@@ -37,7 +37,6 @@ Route::get('index/{locale}', 'LocaleController@lang');
 Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 
-
 Route::group(['middleware' => ['auth']], function () {
     // Ugro Routes
     Route::get('/ajax-ccountsettingmodal', 'UserController@ajaxAccountSettingModal')->name('user_settingmodal');
@@ -45,15 +44,24 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/update-account-settings', 'UserController@updateAccountSettings');
     Route::post('/contacts-profile', 'UserController@updateProfile')->name('user_updateprofile');
 
+    Route::get('/lesson-overview-{id}', 'LessonController@overview')->name('lesson_overview');
+    Route::get('/lesson-show-{id}', 'LessonController@show')->name('lesson_show');
+    Route::get('/lesson/download/{filename?}/{originname?}', 'LessonController@getDownload')->name('lesson_download');
+
+    Route::get('playbook-overview', 'PlaybookController@overview')->name('playbook_overview');
+    Route::get('playbook-show-{id}', 'PlaybookController@show')->name('playbook_show');
+
+});
+
+Route::group(['middleware' => ['admin']], function () {
+
+
     Route::get('/lesson-index', 'LessonController@index')->name('lesson_index');
     Route::get('/lesson-create', 'LessonController@create')->name('lesson_create');
     Route::post('/lesson-store', 'LessonController@store')->name('lesson_store');
-    Route::get('/lesson-show-{id}', 'LessonController@show')->name('lesson_show');
     Route::get('/lesson-edit-{id}', 'LessonController@edit')->name('lesson_edit');
     Route::post('/lesson-update-{id}', 'LessonController@update')->name('lesson_update');
     Route::get('/lesson-destroy-{id}', 'LessonController@destroy')->name('lesson_destroy');
-    Route::get('/lesson/download/{filename?}/{originname?}', 'LessonController@getDownload')->name('lesson_download');
-    Route::get('/lesson-overview-{id}', 'LessonController@overview')->name('lesson_overview');
 
     Route::get('/lesson-fileupload-{id}',  'LessonController@lessonUpload')->name('lesson_lessonupload');
     Route::post('/lesson-ajax-fileupload', 'LessonController@saveUploadFile')->name('lesson_saveuploadfile');
@@ -66,12 +74,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('playbook-index', 'PlaybookController@index')->name('playbook_index');
     Route::get('playbook-create', 'PlaybookController@create')->name('playbook_create');
     Route::post('playbook-store', 'PlaybookController@store')->name('playbook_store');
-    Route::get('playbook-show-{id}', 'PlaybookController@show')->name('playbook_show');
     Route::get('playbook-edit-{id}', 'PlaybookController@edit')->name('playbook_edit');
     Route::post('playbook-update-{id}', 'PlaybookController@update')->name('playbook_update');
     Route::get('/playbook-destroy-{id}', 'PlaybookController@destroy')->name('playbook_destroy');
-    Route::get('playbook-overview', 'PlaybookController@overview')->name('playbook_overview');
-    
+
+    Route::get('/users', 'UserController@show')->name('user-table')->middleware('admin');
+    Route::post('users/delete/{id}', 'UserController@destroy')->name('user-delete');
+
     // Facebook Ad library section
     Route::get('fackbook-ad-library', 'FacebookAdLibrary@index')->name('playbook_index');
     Route::post('fbad/store', 'FacebookAdLibrary@store')->name('fbad.store');
