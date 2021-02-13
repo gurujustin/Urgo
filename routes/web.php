@@ -1,6 +1,8 @@
 <?php
 require_once 'simple_html_dom.php';
 
+use App\Events\SendNotification;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -37,6 +39,11 @@ Route::get('index/{locale}', 'LocaleController@lang');
 Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 
+Route::get('/login','Auth\LoginController@show_login_form')->name('login');
+Route::post('/login', 'Auth\LoginController@process_login')->name('login');
+Route::get('/register', 'Auth\LoginController@show_signup_form')->name('register');
+Route::post('/register', 'Auth\LoginController@register')->name('register');
+
 Route::group(['middleware' => ['auth']], function () {
     // Ugro Routes
     Route::get('/ajax-ccountsettingmodal', 'UserController@ajaxAccountSettingModal')->name('user_settingmodal');
@@ -54,7 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::group(['middleware' => ['admin']], function () {
-
+    // Route::get('/send', 'NotificationController@sendNotification');
 
     Route::get('/lesson-index', 'LessonController@index')->name('lesson_index');
     Route::get('/lesson-create', 'LessonController@create')->name('lesson_create');
@@ -78,7 +85,10 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('playbook-update-{id}', 'PlaybookController@update')->name('playbook_update');
     Route::get('/playbook-destroy-{id}', 'PlaybookController@destroy')->name('playbook_destroy');
 
-    Route::get('/users', 'UserController@show')->name('user-table')->middleware('admin');
+    Route::get('/notification', 'NotificationController@index')->name('notificaiton');
+    Route::post('/notification/send', 'NotificationController@SendNotification')->name('notification-send');
+
+    Route::get('/users', 'UserController@show')->name('user-table');
     Route::post('users/delete/{id}', 'UserController@destroy')->name('user-delete');
 
     // Facebook Ad library section
@@ -108,4 +118,4 @@ Route::group(['middleware' => ['admin']], function () {
 //Add routes before this line only
 Route::get('/{any}', 'HomeController@index');
 
-Route::get('/', 'HomeController@root');
+Route::get('/', 'HomeController@root')->name('home');

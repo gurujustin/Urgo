@@ -11,21 +11,21 @@
         <!-- App js -->
         <script src="{{ URL::asset('assets/js/app.min.js') }}"></script>
         <script>
-            
+
             $(window).on('hashchange', function (e) {
                 refreshContent()
             });
-            
+
             if (window.location.hash) {
                 $(window).trigger('hashchange')
             }
-            
+
             function refreshContent() {
                 var hash = window.location.hash.substring(1);
                 console.log('hash',hash);
                 var url="{{ url('')}}"+'/'+hash;
-                console.log('targetPage: ', url);    
-                ajaxLoadPage(url);           
+                console.log('targetPage: ', url);
+                ajaxLoadPage(url);
             }
 
             function ajaxLoadPage(url) {
@@ -49,8 +49,8 @@
                     }
                 })
             }
-            
-            function loadAccountSettingModal(){       
+
+            function loadAccountSettingModal(){
                 $.ajax({
                     url: '{{route('user_settingmodal')}}',
                     success:function(content){
@@ -59,18 +59,18 @@
                     }
                 })
             }
-            
+
             function chooseavatar(){
                 $("#avatar_file").click();
             }
-            
+
             function previewAvatar(event) {
                 var output = document.getElementById('settingavatarimage');
                 output.src = URL.createObjectURL(event.target.files[0]);
                 output.onload = function() {
                     URL.revokeObjectURL(output.src) // free memory
                 }
-                
+
                 const fd = new FormData();
                 fd.append('avatar', event.target.files[0]);
                 fd.append('user', 'userid');
@@ -82,20 +82,20 @@
                     contentType: false,
                     processData: false,
                     success: function() {
-                        
+
                     }
                 })
             }
-            
+
             $(document).ready(function() {
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 });
-                
-                
-                $('#sidebar-menu #side-menu a.ajax-menu').click(function(e) {                  
+
+
+                $('#sidebar-menu #side-menu a.ajax-menu').click(function(e) {
                     $('#sidebar-menu  #side-menu li').removeClass('mm-active');
                     $(this).parent('li').addClass('mm-active');
 
@@ -103,8 +103,22 @@
                     $(this).addClass('active');
                 });
             })
-            
-            
+
+
             $('body').attr('data-sidebar', 'light');
+        </script>
+        <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+        <script>
+
+          // Enable pusher logging - don't include this in production
+          Pusher.logToConsole = true;
+
+          var pusher = new Pusher('52d732c27544eef0389a', {
+            cluster: 'eu'
+          });
+          var channel = pusher.subscribe('user-notification');
+          channel.bind('send-event', function(data) {
+            alert(JSON.stringify(data));
+          });
         </script>
         @yield('script-bottom')

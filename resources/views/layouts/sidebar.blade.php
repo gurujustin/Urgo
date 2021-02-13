@@ -194,7 +194,7 @@
                 </li>
 
                 <li style="margin-top: -4px;">
-                    <a href="#" class=" waves-effect">
+                    <a href="{{ route('notificaiton') }}" class=" waves-effect">
                         <svg id="Iconly_Light_Category" data-name="Iconly/Light/Category" xmlns="http://www.w3.org/2000/svg" width="17.659" height="17.659" viewBox="0 0 17.659 17.659">
                           <g id="Category" transform="translate(1.472 1.472)">
                             <path id="Stroke_1" data-name="Stroke 1" d="M1.8,0h2.4a1.81,1.81,0,0,1,1.8,1.818V4.241a1.81,1.81,0,0,1-1.8,1.818H1.8A1.81,1.81,0,0,1,0,4.241V1.818A1.81,1.81,0,0,1,1.8,0Z" transform="translate(8.709 0)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
@@ -203,7 +203,7 @@
                             <path id="Stroke_7" data-name="Stroke 7" d="M1.8,0h2.4a1.81,1.81,0,0,1,1.8,1.818V4.241a1.81,1.81,0,0,1-1.8,1.818H1.8A1.81,1.81,0,0,1,0,4.241V1.818A1.81,1.81,0,0,1,1.8,0Z" transform="translate(8.709 8.657)" fill="none" stroke="#775cdc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
                           </g>
                         </svg>
-                        <span>Creative Assets</span>
+                        <span>Send Notifications</span>
                     </a>
                 </li>
 

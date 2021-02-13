@@ -29,7 +29,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="username">Email</label>
-                            <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                            <input name="email" type="email" class="required form-control @error('email') is-invalid @enderror"
                                 @if (old('email')) value="{{ old('email') }}" @else value="" @endif id="username"
                                 placeholder="Enter username" autocomplete="email" autofocus>
                             @error('email')
@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label for="userpassword">Password</label>
                             <input type="password" name="password"
-                                class="form-control  @error('password') is-invalid @enderror" id="userpassword" value=""
+                                class="required form-control  @error('password') is-invalid @enderror" id="userpassword" value=""
                                 placeholder="Enter password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="custom-control custom-checkbox text-center mb-5">
-                            <input type="checkbox" class="custom-control-input" id="keepMe">
+                            <input type="checkbox" class="custom-control-input" id="keepMe" name="remember">
                             <label class="custom-control-label" for="keepMe">Keep me logged in on this device</label>
                         </div>
 
@@ -69,7 +69,7 @@
                         <div class="mt-5 text-center">
                             © <script>
                                 document.write(new Date().getFullYear())
-        
+
                             </script> Ugro. Developed by <i class="mdi mdi-heart text-danger"></i> Tom Valentino</p>
                         </div>
                     </form>
